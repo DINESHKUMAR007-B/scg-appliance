@@ -60,11 +60,11 @@ Resources:
     Type: AWS::Lex::BotAlias
     DependsOn: 
       - LexBot
-      - LexBotVersion43486451  # Ensures that LexBotVersion43486451 is created before the BotAlias
+      - LexBotVersion64382495  # Ensures that LexBotVersion64382495 is created before the BotAlias
     Properties:
       BotAliasName: applianceenglish
       BotId: !GetAtt LexBot.Id
-      BotVersion: !GetAtt LexBotVersion43486451.BotVersion
+      BotVersion: !GetAtt LexBotVersion64382495.BotVersion
       Description: Alias for english
       BotAliasLocaleSettings:
         - BotAliasLocaleSetting:
@@ -99,11 +99,11 @@ Resources:
     Type: AWS::Lex::BotAlias
     DependsOn: 
       - LexBot
-      - LexBotVersion43486451  # Ensures that LexBotVersion43486451 is created before the BotAlias
+      - LexBotVersion64382495  # Ensures that LexBotVersion64382495 is created before the BotAlias
     Properties:
       BotAliasName: appliancespanish
       BotId: !GetAtt LexBot.Id
-      BotVersion: !GetAtt LexBotVersion43486451.BotVersion
+      BotVersion: !GetAtt LexBotVersion64382495.BotVersion
       Description: Alias for spanish
       BotAliasLocaleSettings:
         - BotAliasLocaleSetting:
@@ -134,7 +134,7 @@ Resources:
                 LogPrefix: !Sub 'lex-conversations/${Environment}-bot'
             Enabled: true
 
-  LexBotVersion43486451: 
+  LexBotVersion64382495: 
     Type: AWS::Lex::BotVersion
     DependsOn: 
       - LexBot
